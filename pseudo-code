@@ -1,0 +1,3 @@
+if oob
+  return false
+if already viewed this point
