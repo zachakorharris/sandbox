@@ -18,11 +18,9 @@ def find_end(mapimage):
             if mapimage.getpixel((x,y)) == (255,0,0):
                 return (x,y)
     return None
-"""
-IMG = Image.new("RGB",(800,800),(128,128,128))
-"""
+
 global IMG
-IMG = Image.open('map1.png')
+IMG = Image.open('paint_map4.bmp')
 
 def kruskal(start,end,maparr):
     print str(start) + str(IMG.getpixel(start))
@@ -92,7 +90,7 @@ def kruskal(start,end,maparr):
 
 
 
-maparr = [[None for i in range(20)] for j in range(20)]
+maparr = [[None for i in range(IMG.size[0])] for j in range(IMG.size[1])]
 
 
 start = find_start(IMG)
